@@ -1,9 +1,12 @@
 from selenium import webdriver
-driver = webdriver.Chrome("C:\D_drive\Programs\Python projects\Test Automation\webdrivers\chromedriver.exe")
+import time
+driver = webdriver.Chrome("PATH")
 
 
-driver.get("https://www.abv.bg/")
+driver.get("your_website")
+time.sleep(5)
 driver.find_element_by_id("username").send_keys("your_username_here")
 
 driver.find_element_by_id ("password").send_keys("your_password_here")
-driver.find_element_by_id("loginBut").click()
+time.sleep(5)
+driver.find_element_by_id("login").click()
